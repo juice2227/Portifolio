@@ -97,6 +97,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
+				// This link is a 404, personal usernames are trickier to advertise than discord servers.
                   href="https://www.discord.com/celinebenard"
                   target="_blank"
                   rel="noreferrer"
