@@ -13,7 +13,7 @@ function ProjectCards(props) {
 	  >
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
+          {props.description || <p style={{ fontStyle: "italic", color:"grey", textAlign: "center" }}>No description provided</p>}
         </Card.Text>
 		<div style={{ marginTop: "auto", marginBottom: "10px" }}>
         <Button variant="primary" href={props.ghLink} target="_blank">

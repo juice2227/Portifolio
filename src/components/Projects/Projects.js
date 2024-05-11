@@ -2,15 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import blog from "../../Assets/Projects/blog.png";
+import weather from "../../Assets/Projects/weather.png";
 
 function Projects() {
-	let imgr = {emotion, editor, chatify, suicide, blog, leaf};
+		let imgr = {weather};
+  const gh = "https://github.com"
 	  const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
 
@@ -51,7 +47,7 @@ function Projects() {
                 isBlog={project.isBlog}
                 title={project.title}
                 description={project.description}
-                ghLink={project.ghLink}
+				ghLink={project.ghLink.startsWith(gh)? project.ghLink : `${gh}/${project.ghLink}`}
                 demoLink={project.demoLink}
               />
             </Col>
